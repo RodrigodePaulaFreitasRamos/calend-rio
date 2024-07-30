@@ -3,337 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Calendário - 2024</title>
+    <title>Calendário 2024</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
         table {
-            border-collapse: collapse;
             width: 100%;
-            margin-bottom: 20px;
+            border-collapse: collapse;
+            page-break-after: always;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            width: 14%;
             text-align: center;
+            border: 1px solid #ddd;
+            padding: 5px;
+            height: 100px;
+            vertical-align: top;
         }
         th {
-            background-color: #f2f2f2;
-        }
-        .rest {
-            background-color: #e6f7ff; /* Azul claro para descanso */
-        }
-        .saturday {
-            background-color: #e6ffe6;
+            background-color: #f4f4f4;
         }
         .sunday {
-            background-color: #ffffe6;
+            background-color: #f8d7da; /* Laranja para domingos */
+        }
+        .saturday {
+            background-color: #fff3cd; /* Amarelo para sábados */
         }
         .holiday {
-            background-color: #d0f0c0;
+            background-color: #d4edda; /* Verde claro para feriados */
         }
-        .holiday span {
-            display: block;
-            font-weight: bold;
+        .rest {
+            background-color: #e2f0ff; /* Azul claro para descanso */
         }
-        .special {
-            background-color: #e6f7ff; /* Azul claro especial */
+        .holiday-name {
+            font-size: 0.9em;
+        }
+        @media print {
+            body {
+                margin: 0;
+            }
+            table {
+                page-break-inside: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Nosso Calendário - 2024</h1>
+    <h1>Calendário 2024</h1>
     
-    <!-- Calendário de Agosto -->
-    <h2>Agosto 2024</h2>
-    <table>
-        <tr>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>
-        <tr>
-            <td class="rest">1<br><span>Lica: Descanso</span></td>
-            <td>2<br><span>Lica: Plantão</span></td>
-            <td class="rest">3<br><span>Lica: Descanso</span></td>
-            <td>4<br><span>Lica: Plantão</span></td>
-            <td class="rest">5<br><span>Lica: Descanso</span></td>
-            <td class="saturday">6<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>8<br><span>Lica: Plantão</span></td>
-            <td class="rest">9<br><span>Lica: Descanso</span></td>
-            <td>10<br><span>Lica: Plantão</span></td>
-            <td class="rest">11<br><span>Lica: Descanso</span></td>
-            <td>12<br><span>Lica: Plantão</span></td>
-            <td class="saturday">13<br><span>Lica: Descanso</span></td>
-            <td class="sunday">14<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest special">15<br><span>Lica: Descanso<br>Colação de Grau - Rodrigo</span></td>
-            <td>16<br><span>Lica: Plantão</span></td>
-            <td class="rest">17<br><span>Lica: Descanso</span></td>
-            <td>18<br><span>Lica: Plantão</span></td>
-            <td class="rest">19<br><span>Lica: Descanso</span></td>
-            <td class="saturday">20<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td class="holiday">22<br><span>Lica: Plantão<br>Feriado: Dia dos Pais</span></td>
-            <td class="rest">23<br><span>Lica: Descanso</span></td>
-            <td>24<br><span>Lica: Plantão</span></td>
-            <td class="rest">25<br><span>Lica: Descanso</span></td>
-            <td>26<br><span>Lica: Plantão</span></td>
-            <td class="saturday">27<br><span>Lica: Descanso</span></td>
-            <td class="sunday">28<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">29<br><span>Lica: Plantão</span></td>
-            <td class="rest">30<br><span>Lica: Plantão</span></td>
-            <td class="rest">31<br><span>Lica: Descanso</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <!-- Botão para imprimir -->
+    <button onclick="window.print()">Imprimir Calendário</button>
+    
+    <!-- Calendário de Julho -->
+<h2>Julho 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest">1<br><span>Lica: Descanso</span></td>
+        <td>2<br><span>Lica: Plantão</span></td>
+        <td class="rest">3<br><span>Lica: Descanso</span></td>
+        <td class="holiday">4<br><span>Independência do Brasil</span></td>
+        <td class="rest">5<br><span>Lica: Descanso</span></td>
+        <td class="saturday">6<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>8<br><span>Lica: Plantão</span></td>
+        <td class="rest">9<br><span>Lica: Descanso</span></td>
+        <td>10<br><span>Lica: Plantão</span></td>
+        <td class="rest">11<br><span>Lica: Descanso</span></td>
+        <td>12<br><span>Lica: Plantão</span></td>
+        <td class="saturday">13<br><span>Lica: Descanso</span></td>
+        <td class="sunday">14<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">15<br><span>Lica: Descanso</span></td>
+        <td>16<br><span>Lica: Plantão</span></td>
+        <td class="rest">17<br><span>Lica: Descanso</span></td>
+        <td>18<br><span>Lica: Plantão</span></td>
+        <td class="rest">19<br><span>Lica: Descanso</span></td>
+        <td class="saturday">20<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>22<br><span>Lica: Plantão</span></td>
+        <td class="rest">23<br><span>Lica: Descanso</span></td>
+        <td>24<br><span>Lica: Plantão</span></td>
+        <td class="rest">25<br><span>Lica: Descanso</span></td>
+        <td>26<br><span>Lica: Plantão</span></td>
+        <td class="saturday">27<br><span>Lica: Descanso</span></td>
+        <td class="sunday">28<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">29<br><span>Lica: Plantão</span></td>
+        <td class="rest">30<br><span>Lica: Descanso</span></td>
+        <td class="rest">31<br><span>Lica: Folga<br>Cirurgia Rodrigo</span></td>
+    </tr>
+</table>
+				
+<!-- Calendário de Agosto -->
+<h2>Agosto 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest">1<br><span>Lica: Descanso</span></td>
+        <td>2<br><span>Lica: Plantão</span></td>
+        <td class="rest">3<br><span>Lica: Descanso</span></td>
+        <td>4<br><span>Lica: Plantão</span></td>
+        <td class="rest">5<br><span>Lica: Descanso</span></td>
+        <td class="saturday">6<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>8<br><span>Lica: Plantão</span></td>
+        <td class="rest">9<br><span>Lica: Descanso</span></td>
+        <td>10<br><span>Lica: Plantão</span></td>
+        <td class="rest">11<br><span>Lica: Descanso</span></td>
+        <td>12<br><span>Lica: Plantão</span></td>
+        <td class="saturday">13<br><span>Lica: Descanso</span></td>
+        <td class="sunday">14<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">
+            <div class="circle">15</div><br>
+            <span class="bold-red">Lica: Descanso<br><strong>Colação de Grau Rodrigo</strong></span>
+        </td>
+        <td>16<br><span>Lica: Plantão</span></td>
+        <td class="rest">17<br><span>Lica: Descanso</span></td>
+        <td>18<br><span>Lica: Plantão</span></td>
+        <td class="rest">19<br><span>Lica: Descanso</span></td>
+        <td class="saturday">20<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>22<br><span>Lica: Plantão</span></td>
+        <td class="rest">23<br><span>Lica: Descanso</span></td>
+        <td>24<br><span>Lica: Plantão</span></td>
+        <td class="rest">25<br><span>Lica: Descanso</span></td>
+        <td>26<br><span>Lica: Plantão</span></td>
+        <td class="saturday">27<br><span>Lica: Descanso</span></td>
+        <td class="sunday">28<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">29<br><span>Lica: Descanso</span></td>
+        <td class="rest">30<br><span>Lica: Plantão</span></td>
+        <td class="rest">31<br><span>Lica: Descanso</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
-    <!-- Calendário de Setembro -->
-    <h2>Setembro 2024</h2>
-    <table>
-        <tr>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>
-        <tr>
-            <td class="rest">1<br><span>Lica: Descanso</span></td>
-            <td class="holiday">2<br><span>Lica: Plantão<br>Feriado: Independência do Brasil</span></td>
-            <td class="rest">3<br><span>Lica: Descanso</span></td>
-            <td>4<br><span>Lica: Plantão</span></td>
-            <td class="rest">5<br><span>Lica: Descanso</span></td>
-            <td class="saturday">6<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>8<br><span>Lica: Plantão</span></td>
-            <td class="rest">9<br><span>Lica: Descanso</span></td>
-            <td>10<br><span>Lica: Plantão</span></td>
-            <td class="rest">11<br><span>Lica: Descanso</span></td>
-            <td>12<br><span>Lica: Plantão</span></td>
-            <td class="saturday">13<br><span>Lica: Descanso</span></td>
-            <td class="sunday">14<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">15<br><span>Lica: Descanso</span></td>
-            <td>16<br><span>Lica: Plantão</span></td>
-            <td class="rest">17<br><span>Lica: Descanso</span></td>
-            <td>18<br><span>Lica: Plantão</span></td>
-            <td class="rest">19<br><span>Lica: Descanso</span></td>
-            <td class="saturday">20<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>22<br><span>Lica: Plantão</span></td>
-            <td class="rest">23<br><span>Lica: Descanso</span></td>
-            <td>24<br><span>Lica: Plantão</span></td>
-            <td class="rest">25<br><span>Lica: Descanso</span></td>
-            <td>26<br><span>Lica: Plantão</span></td>
-            <td class="saturday">27<br><span>Lica: Descanso</span></td>
-            <td class="sunday">28<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">29<br><span>Lica: Descanso</span></td>
-            <td class="rest">30<br><span>Lica: Plantão</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+<!-- Calendário de Setembro -->
+<h2>Setembro 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest-blue">1<br><span>Lica: Plantão</span></td>
+        <td class="rest-blue">2<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">3<br><span>Lica: Plantão</span></td>
+        <td class="rest-blue">4<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">5<br><span>Lica: Plantão</span></td>
+        <td class="saturday-yellow-light">6<br><span>Lica: Descanso</span></td>
+        <td class="sunday-orange-light">7<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest-blue">8<br><span>Lica: Descanso</span></td>
+        <td>9<br><span>Lica: Plantão</span></td>
+        <td class="rest-blue">10<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">11<br><span>Lica: Plantão</span></td>
+        <td class="saturday-yellow-light">12<br><span>Lica: Descanso</span></td>
+        <td class="sunday-orange-light rest-blue">13<br><span>Lica: Plantão</span></td>
+        <td class="rest-blue">14<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td class="rest-blue">15<br><span>Lica: Plantão</span></td>
+        <td>16<br><span>Lica: Descanso</span></td>
+        <td>17<br><span>Lica: Plantão</span></td>
+        <td class="rest-blue">18<br><span>Lica: Descanso</span></td>
+        <td class="saturday-yellow-light">19<br><span>Lica: Plantão</span></td>
+        <td class="sunday-orange-light">20<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">21<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td>22<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">23<br><span>Lica: Plantão</span></td>
+        <td>24<br><span>Lica: Descanso</span></td>
+        <td class="rest-blue">25<br><span>Lica: Plantão</span></td>
+        <td>26<br><span>Lica: Descanso</span></td>
+        <td class="saturday-yellow-light">27<br><span>Lica: Plantão</span></td>
+        <td class="sunday-orange-light rest-blue">28<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td class="rest-blue">29<br><span>Lica: Plantão</span></td>
+        <td>30<br><span>Lica: Descanso</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
-    <!-- Calendário de Outubro -->
-    <h2>Outubro 2024</h2>
-    <table>
-        <tr>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>
-        <tr>
-            <td class="rest">1<br><span>Lica: Descanso</span></td>
-            <td class="holiday">2<br><span>Lica: Plantão<br>Feriado: Dia das Crianças</span></td>
-            <td class="rest">3<br><span>Lica: Descanso</span></td>
-            <td>4<br><span>Lica: Plantão</span></td>
-            <td class="rest">5<br><span>Lica: Descanso</span></td>
-            <td class="saturday">6<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>8<br><span>Lica: Plantão</span></td>
-            <td class="rest">9<br><span>Lica: Descanso</span></td>
-            <td>10<br><span>Lica: Plantão</span></td>
-            <td class="rest">11<br><span>Lica: Descanso</span></td>
-            <td>12<br><span>Lica: Plantão</span></td>
-            <td class="saturday">13<br><span>Lica: Descanso</span></td>
-            <td class="sunday">14<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">15<br><span>Lica: Descanso</span></td>
-            <td>16<br><span>Lica: Plantão</span></td>
-            <td class="rest">17<br><span>Lica: Descanso</span></td>
-            <td>18<br><span>Lica: Plantão</span></td>
-            <td class="rest">19<br><span>Lica: Descanso</span></td>
-            <td class="saturday">20<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>22<br><span>Lica: Plantão</span></td>
-            <td class="rest">23<br><span>Lica: Descanso</span></td>
-            <td>24<br><span>Lica: Plantão</span></td>
-            <td class="rest">25<br><span>Lica: Descanso</span></td>
-            <td>26<br><span>Lica: Plantão</span></td>
-            <td class="saturday">27<br><span>Lica: Descanso</span></td>
-            <td class="sunday">28<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">29<br><span>Lica: Descanso</span></td>
-            <td class="rest">30<br><span>Lica: Plantão</span></td>
-            <td class="rest">31<br><span>Lica: Plantão</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+<!-- Calendário de Outubro -->
+<h2>Outubro 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest">1<br><span>Lica: Plantão</span></td>
+        <td class="rest">2<br><span>Lica: Descanso</span></td>
+        <td>3<br><span>Lica: Plantão</span></td>
+        <td class="rest">4<br><span>Lica: Descanso</span></td>
+        <td>5<br><span>Lica: Plantão</span></td>
+        <td class="saturday">6<br><span>Lica: Descanso</span></td>
+        <td class="sunday">7<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">8<br><span>Lica: Descanso</span></td>
+        <td>9<br><span>Lica: Plantão</span></td>
+        <td class="rest">10<br><span>Lica: Descanso</span></td>
+	<td class="holiday">11<br><span>Lica: Plantão<br>Dia das Crianças</span></td></td>
+        <td class="rest">12<br><span>Lica: Plantão</span></td>
+        <td class="saturday">13<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">14<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>15<br><span>Lica: Plantão</span></td>
+        <td class="rest">16<br><span>Lica: Descanso</span></td>
+        <td>17<br><span>Lica: Plantão</span></td>
+        <td class="rest">18<br><span>Lica: Descanso</span></td>
+        <td>19<br><span>Lica: Plantão</span></td>
+        <td class="saturday">20<br><span>Lica: Descanso</span></td>
+        <td class="sunday">21<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">22<br><span>Lica: Descanso</span></td>
+        <td>23<br><span>Lica: Plantão</span></td>
+        <td class="rest">24<br><span>Lica: Descanso</span></td>
+        <td>25<br><span>Lica: Plantão</span></td>
+        <td class="rest">26<br><span>Lica: Descanso</span></td>
+        <td class="saturday">27<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">28<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>29<br><span>Lica: Plantão</span></td>
+        <td class="rest">30<br><span>Lica: Descanso</span></tr>
+		        <td class="rest">31<br><span>Lica: Descanso</span></td>
+				        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
-    <!-- Calendário de Novembro -->
-    <h2>Novembro 2024</h2>
-    <table>
-        <tr>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>
-        <tr>
-            <td class="rest">1<br><span>Lica: Descanso</span></td>
-            <td class="holiday">2<br><span>Lica: Plantão<br>Feriado: Dia de Finados</span></td>
-            <td class="rest">3<br><span>Lica: Descanso</span></td>
-            <td>4<br><span>Lica: Plantão</span></td>
-            <td class="rest">5<br><span>Lica: Descanso</span></td>
-            <td class="saturday">6<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>8<br><span>Lica: Plantão</span></td>
-            <td class="rest">9<br><span>Lica: Descanso</span></td>
-            <td>10<br><span>Lica: Plantão</span></td>
-            <td class="rest">11<br><span>Lica: Descanso</span></td>
-            <td>12<br><span>Lica: Plantão</span></td>
-            <td class="saturday">13<br><span>Lica: Descanso</span></td>
-            <td class="sunday">14<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">15<br><span>Lica: Descanso</span></td>
-            <td>16<br><span>Lica: Plantão</span></td>
-            <td class="rest">17<br><span>Lica: Descanso</span></td>
-            <td>18<br><span>Lica: Plantão</span></td>
-            <td class="rest">19<br><span>Lica: Descanso</span></td>
-            <td class="saturday">20<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>22<br><span>Lica: Plantão</span></td>
-            <td class="rest">23<br><span>Lica: Descanso</span></td>
-            <td>24<br><span>Lica: Plantão</span></td>
-            <td class="rest">25<br><span>Lica: Descanso</span></td>
-            <td>26<br><span>Lica: Plantão</span></td>
-            <td class="saturday">27<br><span>Lica: Descanso</span></td>
-            <td class="sunday">28<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">29<br><span>Lica: Descanso</span></td>
-            <td class="rest">30<br><span>Lica: Plantão</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+<!-- Calendário de Novembro -->
+<h2>Novembro 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest">1<br><span>Lica: Plantão</span></td>
+        <td class="rest">2<br><span>Lica: Descanso</span></td>
+        <td>3<br><span>Lica: Plantão</span></td>
+        <td class="rest">4<br><span>Lica: Descanso</span></td>
+        <td>5<br><span>Lica: Plantão</span></td>
+        <td class="saturday">6<br><span>Lica: Descanso</span></td>
+        <td class="sunday">7<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">8<br><span>Lica: Descanso</span></td>
+        <td>9<br><span>Lica: Plantão</span></td>
+        <td class="rest">10<br><span>Lica: Descanso</span></td>
+	<td class="holiday">11<br><span>Lica: Plantão<br>Dia da República</span></span></td>
+        <td class="rest">12<br><span>Lica: Plantão</span></td>
+        <td class="saturday">13<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">14<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>15<br><span>Lica: Plantão</span></td>
+        <td class="rest">16<br><span>Lica: Descanso</span></td>
+        <td>17<br><span>Lica: Plantão</span></td>
+        <td class="rest">18<br><span>Lica: Descanso</span></td>
+        <td>19<br><span>Lica: Plantão</span></td>
+        <td class="saturday">20<br><span>Lica: Descanso</span></td>
+        <td class="sunday">21<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">22<br><span>Lica: Descanso</span></td>
+        <td>23<br><span>Lica: Plantão</span></td>
+        <td class="rest">24<br><span>Lica: Descanso</span></td>
+        <td>25<br><span>Lica: Plantão</span></td>
+        <td class="rest">26<br><span>Lica: Descanso</span></td>
+        <td class="saturday">27<br><span>Lica: Plantão</span></td>
+        <td class="sunday rest">28<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td>29<br><span>Lica: Plantão</span></td>
+        <td class="rest">30<br><span>Lica: Descanso</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
-    <!-- Calendário de Dezembro -->
-    <h2>Dezembro 2024</h2>
-    <table>
-        <tr>
-            <th>Segunda-feira</th>
-            <th>Terça-feira</th>
-            <th>Quarta-feira</th>
-            <th>Quinta-feira</th>
-            <th>Sexta-feira</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>
-        <tr>
-            <td class="rest">1<br><span>Lica: Descanso</span></td>
-            <td class="holiday">2<br><span>Lica: Plantão<br>Feriado: Dia de Natal</span></td>
-            <td class="rest">3<br><span>Lica: Descanso</span></td>
-            <td>4<br><span>Lica: Plantão</span></td>
-            <td class="rest">5<br><span>Lica: Descanso</span></td>
-            <td class="saturday">6<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">7<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>8<br><span>Lica: Plantão</span></td>
-            <td class="rest">9<br><span>Lica: Descanso</span></td>
-            <td>10<br><span>Lica: Plantão</span></td>
-            <td class="rest">11<br><span>Lica: Descanso</span></td>
-            <td>12<br><span>Lica: Plantão</span></td>
-            <td class="saturday">13<br><span>Lica: Descanso</span></td>
-            <td class="sunday">14<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">15<br><span>Lica: Descanso</span></td>
-            <td>16<br><span>Lica: Plantão</span></td>
-            <td class="rest">17<br><span>Lica: Descanso</span></td>
-            <td>18<br><span>Lica: Plantão</span></td>
-            <td class="rest">19<br><span>Lica: Descanso</span></td>
-            <td class="saturday">20<br><span>Lica: Plantão</span></td>
-            <td class="sunday rest">21<br><span>Lica: Descanso</span></td>
-        </tr>
-        <tr>
-            <td>22<br><span>Lica: Plantão</span></td>
-            <td class="rest">23<br><span>Lica: Descanso</span></td>
-            <td>24<br><span>Lica: Plantão</span></td>
-            <td class="rest">25<br><span>Lica: Descanso</span></td>
-            <td>26<br><span>Lica: Plantão</span></td>
-            <td class="saturday">27<br><span>Lica: Descanso</span></td>
-            <td class="sunday">28<br><span>Lica: Plantão</span></td>
-        </tr>
-        <tr>
-            <td class="rest">29<br><span>Lica: Descanso</span></td>
-            <td class="rest">30<br><span>Lica: Plantão</span></td>
-            <td class="rest">31<br><span>Lica: Plantão</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</div>
+<!-- Calendário de Dezembro -->
+<h2>Dezembro 2024</h2>
+<table>
+    <tr>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+    </tr>
+    <tr>
+        <td class="rest">1<br><span>Lica: Plantão</span></td>
+        <td class="rest">2<br><span>Lica: Descanso</span></td>
+        <td class="rest">3<br><span>Lica: Plantão</span></td>
+        <td class="rest">4<br><span>Lica: Descanso</span></td>
+        <td class="rest">5<br><span>Lica: Plantão</span></td>
+        <td class="saturday">6<br><span>Lica: Descanso</span></td>
+        <td class="sunday">7<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">8<br><span>Lica: Descanso</span></td>
+        <td>9<br><span>Lica: Plantão</span></td>
+        <td class="rest">10<br><span>Lica: Descanso</span></td>
+        <td class="rest">11<br><span>Lica: Plantão</span></td>
+        <td class="rest">12<br><span>Lica: Descanso</span></td>
+        <td class="saturday">13<br><span>Lica: Plantão</span></td>
+        <td class="sunday">14<br><span>Lica: Descanso</span></td>
+    </tr>
+    <tr>
+        <td class="rest">15<br><span>Lica: Plantão</span></td>
+        <td class="rest">16<br><span>Lica: Descanso</span></td>
+        <td>17<br><span>Lica: Plantão</span></td>
+        <td class="holiday">18<br><span>Natal<br>Lica: Descanso</span></td>
+        <td class="rest">19<br><span>Lica: Plantão</span></td>
+        <td class="saturday">20<br><span>Lica: Descanso</span></td>
+        <td class="sunday rest">21<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td>22<br><span>Lica: Plantão</span></td>
+        <td class="rest">23<br><span>Lica: Descanso</span></td>
+        <td>24<br><span>Lica: Plantão</span></td>
+        <td class="rest">25<br><span>Lica: Descanso</span></td>
+        <td>26<br><span>Lica: Plantão</span></td>
+        <td class="saturday">27<br><span>Lica: Descanso</span></td>
+        <td class="sunday">28<br><span>Lica: Plantão</span></td>
+    </tr>
+    <tr>
+        <td class="rest">29<br><span>Lica: Descanso</span></td>
+        <td>30<br><span>Lica: Plantão</span></td>
+        <td class="rest">31<br><span>Lica: Descanso</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
+			
